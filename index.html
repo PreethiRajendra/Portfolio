@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Preethi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-anchor">About</a></li>
+          <li><a href="#experience" class="nav-anchor">Experience</a></li>
+          <li><a href="#projects" class="nav-anchor">Projects</a></li>
+          <li><a href="#contact" class="nav-anchor">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <nav id="hamburger-nav">
+      <div class="logo">Preethi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile-container" class="window">
+      <div class="window-header">
+        <span class="window-title">Hello!</span>
+        <div class="window-controls">
+          <span class="control-button minimize"></span>
+          <span class="control-button maximize"></span>
+          <span class="control-button close"></span>
+        </div>
+      </div>
+      <section id="profile">
+        <div class="profile-container">
+          <!-- Left Side: Text Content -->
+          <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">PREETHI</h1>
+            <p class="section__text__p2 typing-text">A passionate developer</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/preethi_resume.pdf')"
+              >
+                Download CV
+              </button>
+              <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+              </button>
+            </div>
+            <div id="socials-container">
+              <img
+                src="./assets/linkedin.png"
+                alt="My LinkedIn profile"
+                class="icon"
+                onclick="location.href='https://linkedin.com/'"
+              />
+              <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="location.href='https://github.com/'"
+              />
+            </div>
+          </div>
+          
+          <!-- Right Side: Image -->
+          <div class="profile-image">
+            <img src="./assets/profile-picture.png" alt="Preethi's Profile Picture" />
+          </div>
+        </div>
+      </section>
+      
+    </section>
+    
+
+    <!-- The about section - new -->
+    <section id="about">
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers1">
+            
+            <!-- Experience Card with Flip Effect -->
+            <div id="experienceCard" class="card" onclick="toggleCard('experienceCard')">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                  <h3>Experience</h3>
+                </div>
+                <div class="card-back">
+                  <p>Internship - AI intern at Infosys Springboard<br />Oct 2024 - Present</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Education Card with Flip Effect -->
+            <div id="educationCard" class="card" onclick="toggleCard('educationCard')">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="./assets/education.png" alt="Education icon" class="icon" />
+                  <h3>Education</h3>
+                </div>
+                <div class="card-back">
+                  <p>B.E in Computer Science and Engineering <br>VVCE,Mysuru<br /><b>2021-2025</b></p>
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <h1 class="title">Skill Set</h1>
+      
+      <!-- Programming Languages Carousel -->
+      <div class="carousel-container">
+        <h2 class="experience-sub-title">Programming Languages</h2>
+        <div class="carousel" id="carouselLanguages">
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>C++ with OOPS</h3><p>Intermediate</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>C</h3><p>Basic</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>Python</h3><p>Basic</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>Java</h3><p>Basic</p></div>
+          </div>
+        </div>
+        <button class="carousel-button left" onclick="moveCarousel('carouselLanguages', -1)">❮</button>
+        <button class="carousel-button right" onclick="moveCarousel('carouselLanguages', 1)">❯</button>
+      </div>
+    
+ <!-- Development Carousel -->
+ <div class="carousel-container">
+  <h2 class="experience-sub-title">Development</h2>
+  <div class="carousel" id="carouselDevelopment">
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>Python</h3><p>Intermediate</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>Django</h3><p>Intermediate</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>Flask</h3><p>Intermediate</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>HTML</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>CSS</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>SASS</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>NodeJS</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>ExpressJS</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>JavaScript</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>MYSQL</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>SQLite</h3><p>Basic</p></div>
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+      <div><h3>MongoDB</h3><p>Basic</p></div>
+    </div>
+  </div>
+  <button class="carousel-button left" onclick="moveCarousel('carouselDevelopment', -1)">❮</button>
+  <button class="carousel-button right" onclick="moveCarousel('carouselDevelopment', 1)">❯</button>
+</div>
+      <!-- Version Control -->
+      <div class="carousel-container">
+        <h2 class="experience-sub-title">Version Control</h2>
+        <div class="carousel" id="carouselDevelopment">
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>Git</h3><p>Basic</p></div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+            <div><h3>GitHub</h3><p>Basic</p></div>
+          </div>
+        </div>
+        <button class="carousel-button left" >❮</button>
+        <button class="carousel-button right">❯</button>
+      </div>
+      
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+
+   
+    
+    <section id="projects">
+      
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Tracko</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.jpeg"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">SmartSight</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.jpg"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Edusync</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:preethirajendra03@gmail.com" class="contact-links">preethirajendra03@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/preethi-rajendra/" class="contact-links">Preethi Rajendra</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-anchor">About</a></li>
+            <li><a href="#experience" class="nav-anchor">Experience</a></li>
+            <li><a href="#projects" class="nav-anchor">Projects</a></li>
+            <li><a href="#contact" class="nav-anchor">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Preethi. All Information Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
