@@ -112,17 +112,10 @@
   .text-container {
     text-align: justify;
   }
-  
- 
-  
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    display: none; /* Hides the entire page */
-  }
-
-  /* Optional: Show a message when on mobile devices */
+  /* Show a message when on mobile devices */
   .mobile-message {
     display: block;
     text-align: center;
